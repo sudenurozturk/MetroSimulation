@@ -1,10 +1,28 @@
 # MetroSimulation
-Akbank Python ve Yapay Zeka Bootcamp'i Metro Simülasyonu projesi. BFS ile en az aktarmalı, A* ile en kısa yolu bulan kod.
-BFS (Breadth-First Search):
-en_az_aktarma_bul fonksiyonu, BFS algoritması ile her seviyede komşu istasyonları keşfederek en az aktarma ile hedefe ulaşmayı sağlar.
+Akbank Python ve Yapay Zeka Bootcamp'i Metro Simülasyonu projesi.  
 
-A Algoritması*:
-en_hizli_rota_bul fonksiyonu, A* algoritması ile hedefe en hızlı (en kısa sürede ulaşılacak) rotayı hesaplar.
-Bu algoritma, öncelikli bir kuyruk (heapq) kullanarak rotaları zaman sırasına göre değerlendirir.
+## **Proje Tanımı**  
+Bu proje, metro istasyonları arasında **en az aktarmalı** ve **en hızlı rotayı** hesaplayan bir sistemdir. **BFS (Breadth-First Search)** algoritması en az aktarma yapılan rotayı, **A* algoritması** ise en kısa sürede ulaşılacak rotayı bulmak için kullanılmıştır.  
 
+## **Teknik Detaylar**  
+- **İstasyonlar:** Her istasyon, bağlı olduğu hat ve komşu istasyon bilgilerini içerir.  
+- **Bağlantılar:** İki istasyon arasındaki geçiş süresi ile birlikte tanımlanır.  
+- **Algoritmalar:**  
+  - **BFS:** En az aktarmalı rota için kullanılır.  
+  - **A***: En kısa sürede hedefe ulaşmak için kullanılır.  
 
+## **Test Sonuçları**  
+1. **AŞTİ → OSB**  
+   - **En az aktarma:** AŞTİ → Kızılay → Ulus → Demetevler → OSB  
+   - **En hızlı rota (14 dk):** AŞTİ → Kızılay → Demetevler → OSB  
+
+2. **Batıkent → Keçiören**  
+   - **En az aktarma:** Batıkent → Demetevler → Gar → Keçiören  
+   - **En hızlı rota (21 dk):** Batıkent → Demetevler → Gar → Keçiören  
+
+3. **Keçiören → AŞTİ**  
+   - **En az aktarma:** Keçiören → Gar → Sıhhiye → Kızılay → AŞTİ  
+   - **En hızlı rota (24 dk):** Keçiören → Gar → Sıhhiye → Kızılay → AŞTİ  
+
+## **Sonuç**  
+Sistem, **BFS** ve **A*** algoritmalarını kullanarak farklı istasyonlar arasında en uygun güzergahları başarıyla hesaplamaktadır.
